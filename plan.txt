@@ -1,0 +1,93 @@
+https://docs.google.com/document/d/1ICoeTWJ8-ZfE4ei1jscefdDyUnnPgdmhyfXuXLT7FXQ/edit?tab=t.0
+https://claude.ai/chat/9cc34214-4157-4378-ac52-6341ea7a5d16
+
+Overview Slide
+Articulate transitions / leave space between slides
+Don’t say what something isn’t and not explain what it is
+Detail
+
+Intro to Go and Concurrency in Go (based on “Concurrency in Go” book by Katherine Cox-Buday)
+Content: (total of 45 minutes, including discussion time at the end and questions in the middle, can go up to 1 hour)
+Overview slide, literally just listing what we will cover (1-2 minutes)
+Intro to basic Golang (5-8 minutes)
+Concurrency vs Parallelism (1-2 minutes)
+Traditional concurrency patterns in C/Ruby (3-4 minutes. could cut this, but purpose is for juxtaposition between this and the CSP-style of concurrent programming that this book promotes)
+Communicating Sequential Processes (CSP) (5-7 minutes)
+Goroutines (3-5 minutes)
+sync package (5-10 minutes)
+Channels (3-8 minutes)
+Channel patterns (5-10 minutes)
+Context package (3-5 minutes)
+synctest in Go 1.25 (3-5 minutes)
+Ok, so what? We are Ruby developers: (3-5 minutes)
+Discussion / questions (5 minutes)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Intro to Golang
+Compiled, statically typed.
+* Don’t show code, just show compiling in shell *
+go build -o main main.go
+Syntax:
+var x int = 3
+functions
+public/private
+Structs
+types
+Interfaces
+Receiver functions
+Value vs pointer
+Anonymous functions and first class functions
+Modules and packages
+Define both, move on.
+Intro to goroutine
+
+Concurrency vs Parallelism
+Threads with mutex on shared data/critical sections.
+Traditional concurrency patterns in C
+Communicating Sequential Processes
+Goroutines
+Goroutines racing in a for loop, all printing the final i value
+sync package
+WaitGroup
+Mutex and RWMutex
+Cond
+Once
+Pool
+Channels
+Buffered, unbuffered
+Reading, writing, closing
+select
+Fairly and randomly reads from each branch in select
+time.After channel
+Select Statement surprise with two goroutines and one, non-looping select
+‘done’ pattern
+Channel patterns
+Or-channel
+Fan-out, fan-in
+Bridge-channel
+Context package
+Life of a request
+context.background()
+Passthrough
+context.WithCancel()/WithTimeout()/WithDeadline()
+context.Value()
+synctest in Go 1.25
+Ok, so what? We are Ruby developers
+???
+
+Goroutine:
+Goroutines are unique to Go (though some other languages have a concurrency primitive that is similar). They’re not OS threads, and they’re not exactly green threads—threads that are managed by a language’s runtime—they’re a higher level of abstraction known as coroutines. Coroutines are simply concurrent subroutines (functions, closures, or methods in Go) that are nonpreemptive—that is, they cannot be interrupted. Instead, coroutines have multiple points throughout which allow for suspension or reentry.
+Book page 38
+
