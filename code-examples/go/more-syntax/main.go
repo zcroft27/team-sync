@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"team-sync/code-examples/more-syntax/shapes"
+	"team-sync/more-syntax/shapes"
 )
 
 func main() {
