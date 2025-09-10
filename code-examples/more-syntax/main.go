@@ -7,7 +7,7 @@ import (
 
 func main() {
 	sq := shapes.Square{SideLength: 3}
-	cir := shapes.Circle{Radius: 2}
+	cir := shapes.Circle{Radius: 4}
 	printShapeFacts(sq)
 	printShapeFacts(cir)
 }
@@ -17,6 +17,6 @@ func main() {
 // }
 
 func printShapeFacts(shp shapes.Shape) {
-	fmt.Printf("Area: %d\n", shp.CalculateArea())
-	fmt.Printf("Perimter: %d\n", shp.CalculatePerimeter())
+	fmt.Printf("Area: %f\n", shp.CalculateArea())
+	fmt.Printf("Perimter: %f\n", shp.CalculatePerimeter())
 }

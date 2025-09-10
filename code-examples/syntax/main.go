@@ -22,9 +22,21 @@ func main() {
 
 	fmt.Printf("Type: %T\n", y)
 
+	foo()
+
 	if z {
 		demonstrateNameChange()
 	}
+
+	anonymousFunction := func() {
+		fmt.Println("hello")
+	}
+
+	anonymousFunction()
+
+	func() {
+		fmt.Println("world")
+	}()
 }
 
 // Private function scoped to the package.
@@ -36,6 +48,7 @@ func foo() {
 // Public receiver function (makes a copy of the struct).
 func (p Person) AlterName(newName string) {
 	p.Name = newName
+	_ = p.Name // to silence static analysis complaints.
 }
 
 // Public pointer receiver function.
@@ -44,8 +57,7 @@ func (p *Person) AlterNamePointer(newName string) {
 }
 
 func demonstrateNameChange() {
-	var george Person
-	george = Person{Name: "George", mothersMaidenName: "Watson"}
+	george := Person{Name: "George", mothersMaidenName: "Watson"}
 
 	fmt.Printf("George's Age (default value): %d\n", george.Age)
 
