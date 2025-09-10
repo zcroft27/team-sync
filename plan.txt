@@ -1,6 +1,3 @@
-https://docs.google.com/document/d/1ICoeTWJ8-ZfE4ei1jscefdDyUnnPgdmhyfXuXLT7FXQ/edit?tab=t.0
-https://claude.ai/chat/9cc34214-4157-4378-ac52-6341ea7a5d16
-
 Overview Slide
 Articulate transitions / leave space between slides
 Don’t say what something isn’t and not explain what it is
@@ -51,7 +48,15 @@ Value vs pointer
 Anonymous functions and first class functions
 Modules and packages
 Define both, move on.
+Go is sort-of low-level
+Faster than most languages, slower than C and Rust.
+Memory modification package is called “unsafe”
 Intro to goroutine
+Define thread/native threads
+Define a coroutine/fiber/green thread
+Define a goroutine
+Show that millions of goroutines are a few kb of memory, user-space context switching.
+
 
 Concurrency vs Parallelism
 Threads with mutex on shared data/critical sections.
