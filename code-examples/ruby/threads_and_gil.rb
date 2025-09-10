@@ -1,8 +1,6 @@
 def worker(name)
   puts "Worker #{name} starting"
-  
-  # This looks synchronous but Ruby's thread scheduler
-  # can switch to other threads during I/O.
+
   sleep 2
   
   puts "Worker #{name} done"
