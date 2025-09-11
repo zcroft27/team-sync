@@ -12,16 +12,16 @@ func printShapeFacts(shp shapes.Shape) {
 
 func main() {
 	defer func() {
-		if r := recover(); r != nil {
-			fmt.Println("recovered from panic. phew!")
-		}
+		// if r := recover(); r != nil {
+		// 	fmt.Println("recovered from panic. phew!")
+		// }
 		fmt.Println("woohoo shapes!")
 	}()
 
 	sq := shapes.Square{SideLength: 3}
 	cir := shapes.Circle{Radius: 4}
 
-	// panic("shapes!")
+	panic("shapes!")
 
 	printShapeFacts(sq)
 	printShapeFacts(cir)

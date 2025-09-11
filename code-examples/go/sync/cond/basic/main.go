@@ -1,6 +1,8 @@
 package main
 
-import "sync"
+import (
+	"sync"
+)
 
 var someSharedVariable bool = false
 
@@ -8,10 +10,10 @@ func main() {
 
 	// Instead of:
 	// for {
-	// mutex.Lock()
-	// !checkConditionOnSharedResource()
-	// mutex.Unlock()
-	// time.Sleep(1*time.Second)
+	// 	mutex.Lock()
+	// 	!checkConditionOnSharedResource()
+	// 	mutex.Unlock()
+	// 	time.Sleep(1 * time.Second)
 	// }
 	// wasting time and consuming lots of CPU cycles,
 
