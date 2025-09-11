@@ -9,16 +9,14 @@ type Person struct {
 }
 
 func main() {
-	// var x int
-	// x = 3 (commented out because you cannot declare and not use a variable, won't compile)
+	var x int = 3
 	y := 8
-	// y:= 4 (errors, no new variables on the left side of :=)
-	// y = 4.5 (errors, float != int)
-	// y = "hello" (errors, string != int)
+	// y := 4 // (errors, no new variables on the left side of :=)
+	// y = 4.5 // (errors, float != int)
+	// y = "hello" // (errors, string != int)
+	y += x
 
-	var z bool
-	// z := true (errors, no new variables on the left side of :=)
-	z = true
+	var z bool = true
 
 	fmt.Printf("Type: %T\n", y)
 

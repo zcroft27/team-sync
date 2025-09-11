@@ -5,10 +5,6 @@ import (
 	"team-sync/more-syntax/shapes"
 )
 
-// func (shp Shape) printShapeFacts() { Invalid code, cannot define a receiver function for an interface type.
-
-// }
-
 func printShapeFacts(shp shapes.Shape) {
 	fmt.Printf("Area: %f\n", shp.CalculateArea())
 	fmt.Printf("Perimter: %f\n", shp.CalculatePerimeter())
@@ -32,11 +28,13 @@ func main() {
 
 	// Arrays and slices.
 
+	var intArray [5]int
 	var shapesArray [2]shapes.Shape
 	var shapesSlice []shapes.Shape
 
 	shapesArray[0] = sq
 	shapesArray[1] = cir
+	intArray[0] = 1
 
 	// This would panic, uninitialized slice of length 0!
 	// shapesSlice[0] = sq
@@ -46,4 +44,6 @@ func main() {
 	shapesSlice = make([]shapes.Shape, 2)
 	shapesSlice[0] = sq
 	shapesSlice[1] = cir
+
+	shapesSlice = append(shapesSlice, sq)
 }

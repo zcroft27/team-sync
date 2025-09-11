@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	var wg sync.WaitGroup
+	var wg sync.WaitGroup // sempaphore in C/POSIX.
 	sayHello := func() {
 		defer wg.Done()
 		fmt.Println("hello")
