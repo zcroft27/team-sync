@@ -49,4 +49,26 @@ func main() {
 	// 	}
 	// }
 	// fmt.Printf("c1Count: %d\nc2Count: %d\n", c1Count, c2Count)
+
+	// Closed channels always send their default values.
+	// Go runtime will pretty fairly pick between channels if they are all receiving.
+
+	// time package offers nifty channel to implement timeouts!
+	var c <-chan int
+	select {
+	case <-c:
+	case <-time.After(1 * time.Second):
+		fmt.Println("Timed out.")
+	}
+
+	// You can have a default case to immediately go to
+	// if all other cases are blocking.
+	start := time.Now()
+	var c1, c2 <-chan int
+	select {
+	case <-c1:
+	case <-c2:
+	default:
+		fmt.Printf("In default after %v\n\n", time.Since(start))
+	}
 }
