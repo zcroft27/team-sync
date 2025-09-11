@@ -5,6 +5,15 @@ import (
 	"team-sync/more-syntax/shapes"
 )
 
+// func (shp Shape) printShapeFacts() { Invalid code, cannot define a receiver function for an interface type.
+
+// }
+
+func printShapeFacts(shp shapes.Shape) {
+	fmt.Printf("Area: %f\n", shp.CalculateArea())
+	fmt.Printf("Perimter: %f\n", shp.CalculatePerimeter())
+}
+
 func main() {
 	defer func() {
 		if r := recover(); r != nil {
@@ -15,16 +24,26 @@ func main() {
 
 	sq := shapes.Square{SideLength: 3}
 	cir := shapes.Circle{Radius: 4}
+
 	// panic("shapes!")
+
 	printShapeFacts(sq)
 	printShapeFacts(cir)
-}
 
-// func (shp Shape) printShapeFacts() { Invalid code, cannot define a receiver function for an interface type.
+	// Arrays and slices.
 
-// }
+	var shapesArray [2]shapes.Shape
+	var shapesSlice []shapes.Shape
 
-func printShapeFacts(shp shapes.Shape) {
-	fmt.Printf("Area: %f\n", shp.CalculateArea())
-	fmt.Printf("Perimter: %f\n", shp.CalculatePerimeter())
+	shapesArray[0] = sq
+	shapesArray[1] = cir
+
+	// This would panic, uninitialized slice of length 0!
+	// shapesSlice[0] = sq
+	// shapesSlice[1] = cir
+
+	// make() is used for: slice, map, or channel.
+	shapesSlice = make([]shapes.Shape, 2)
+	shapesSlice[0] = sq
+	shapesSlice[1] = cir
 }
