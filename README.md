@@ -1,0 +1,1 @@
+Code examples for a presentation introducing Golang, concurrency in Go, and culminating with a juxtaposition between traditional synchronous code and CSP-style code solving the Dining Philosopher's Problem.
