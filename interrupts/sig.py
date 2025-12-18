@@ -62,5 +62,7 @@ print(f"Total handler runs: {count}")
 
 
 
-# Even though Python is single-threaded, a signal can interrupt a blocking call inside a signal handler,
+# Even though Python is single-threaded, a signal can interrupt a blocking call (time.sleep(3)) inside a signal handler,
 # causing another handler invocation to start before the previous one finishes.
+#
+# Signal handlers allow a handler to be re-invoked while running, unlike a interrupt handler.
