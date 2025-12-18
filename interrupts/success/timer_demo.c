@@ -30,5 +30,5 @@ static void __exit hello_exit(void) {
 module_init(hello_init);
 module_exit(hello_exit);
 MODULE_LICENSE("GPL");
-MODULE_AUTHOR("Your Name");
+MODULE_AUTHOR("Zach Croft");
 MODULE_DESCRIPTION("Simple timer interrupt demo");
