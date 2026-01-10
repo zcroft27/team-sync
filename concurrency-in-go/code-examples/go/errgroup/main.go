@@ -14,6 +14,10 @@ var services []string = []string{
 	"https://httpbin.org/delay/2", // 2 second delay
 	"https://httpbin.org/delay/2",
 	"https://httpbin.org/delay/2",
+	"https://httpbin.org/delay/2",
+	"https://httpbin.org/delay/2",
+	"https://httpbin.org/delay/2",
+	"https://httpbin.org/delay/2",
 	"https://httpbin.org/status/503", // Immediately returns service unavailable
 	"https://httpbin.org/delay/2",
 	"https://httpbin.org/delay/2",
